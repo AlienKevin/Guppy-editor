@@ -22,31 +22,34 @@
 
 <body>
     <h1>Guppy Editor</h1>
-    <!--source: https://guppy.js.org/site/examples/io/-->
-    <div class="label">Edit: </div>
-    <div id="guppy1" class="answerbox"></div><br />
-    <div class="label">Export: </div>
-    <div id="outputBtns">
-        <div class="button" data-output-type="latex">LaTeX</div>
-        <div class="button" data-output-type="asciimath">ASCIIMath</div>
-        <div class="button" data-output-type="text">Plain text</div>
-        <div class="button" data-output-type="ast">JSON AST</div>
-        <div class="button" data-output-type="eqns">JSON equation list</div>
-        <div class="button" data-output-type="function">Javascript</div>
-        <div class="button" data-output-type="xml">XML</div><br />
-    </div>
-    <div class="label">Output: </div>
-    <input type="text" id="output_field" readonly placeholder="Output will appear here"></input>
-
-    <!--Based on: https://www.w3schools.com/howto/howto_js_copy_clipboard.asp-->
-    <div class="tooltip">
-        <div id="copyBtn" onclick="copyOutput()" onmouseout="tooltipResponse()">
-            <span class="tooltiptext" id="copyTooltip">Copy to clipboard</span>
-            Copy
+    <div class="grid-container">
+        <!--source: https://guppy.js.org/site/examples/io/-->
+        <div class="label">Edit:</div>
+        <div id="guppy1" class="answerbox"></div><br />
+        <div class="label">Export: </div>
+        <div id="outputBtns">
+            <div class="button" data-output-type="latex">LaTeX</div>
+            <div class="button" data-output-type="asciimath">ASCIIMath</div>
+            <div class="button" data-output-type="text">Plain text</div>
+            <div class="button" data-output-type="ast">JSON AST</div>
+            <div class="button" data-output-type="eqns">JSON equation list</div>
+            <div class="button" data-output-type="function">Javascript</div>
+            <div class="button" data-output-type="xml">XML</div><br />
         </div>
+        <div class="label">Output: </div>
+        <input type="text" id="output_field" readonly placeholder="Output will appear here"></input>
+
+        <!--Based on: https://www.w3schools.com/howto/howto_js_copy_clipboard.asp-->
+        <div class="tooltip">
+            <div id="copyBtn" onclick="copyOutput()" onmouseout="tooltipResponse()">
+                <span class="tooltiptext" id="copyTooltip">Copy to clipboard</span>
+                Copy
+            </div>
+        </div>
+
+        <div id="res"></div>
     </div>
 
-    <div id="res"></div>
     <script src="script.js"></script>
 </body>
 
