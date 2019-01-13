@@ -1,5 +1,6 @@
 const g1 = new Guppy("guppy1");
 const outputField = document.getElementById("outputField");
+const errorField = document.getElementById("errorField");
 let pressTimer;
 let outputType = "latex"; // default output type
 /**
@@ -10,9 +11,9 @@ let output = function (type) {
         content = Guppy("guppy1").engine.get_content(type);
         if (type == "function") content = "Function with variables: " + JSON.stringify(content.vars);
         outputField.value = content;
-        document.getElementById("res").innerHTML = "";
+        errorField.innerHTML = "";
     } catch (e) {
-        document.getElementById("res").innerHTML = '<font color="red">Parsing error</font>';
+        errorField.innerHTML = '<font color="red">Parsing error</font>';
     }
 }
 
@@ -43,8 +44,9 @@ outputBtns.addEventListener("mousedown", function (e) {
         pressTimer = window.setTimeout(function () {
             let alreadyPressed = btn.classList.contains("pressed");
             if (alreadyPressed) {
-                // unpress the button and clear the output
+                // unpress the button and clear the output and error field
                 outputField.value = "";
+                errorField.innerHTML = "";
             } else {
                 // button is not pressed previously
                 outputType = btnType;
