@@ -1,5 +1,5 @@
 const g1 = new Guppy("guppy1");
-const outputField = document.getElementById("output_field");
+const outputField = document.getElementById("outputField");
 let pressTimer;
 let outputType = "latex"; // default output type
 /**
@@ -74,7 +74,7 @@ window.onload = function () {
 // Based on: https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
 function copyOutput() {
     /* Get the text field */
-    var copyText = document.getElementById("output_field");
+    var copyText = document.getElementById("outputField");
     /* Select the text field */
     copyText.select();
     /* Copy the text inside the text field */

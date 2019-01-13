@@ -4,10 +4,14 @@ body {
 
 div.grid-container {
     display: grid;
-    grid-row-gap: 10px;
+    grid-gap: 10px;
     grid-template-columns: 100px auto auto;
     justify-content: start;
     align-content: space-evenly;
+}
+
+div#guppy1, #outputField{
+    min-width: 80vw;
 }
 
 div.label {
