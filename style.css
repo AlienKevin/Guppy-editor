@@ -1,0 +1,111 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#guppy1 {
+    width: 90vw;
+    margin: auto;
+    margin-top: 50px;
+}
+
+/* #input1 {
+    display: none;
+    height: 50px;
+    font-size: 40px;
+    margin: auto;
+    margin-top: 50px;
+} */
+
+/** 
+* Styling input box, buttons, and output box
+* source: https://guppy.js.org/site/examples/io/
+*/
+.answerbox {
+    width: 400px;
+    display: inline-block;
+}
+
+div.button {
+    cursor: pointer;
+    color: white;
+    min-height: 23px;
+    display: inline-block;
+    background-color: #66f;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+}
+
+div.button.pressed{
+    background-color: orange;
+}
+
+input {
+    min-height: 30px;
+    font-size: 30px;
+    display: inline-block;
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+}
+
+div.label {
+    min-width: 70px;
+    display: inline-block;
+}
+
+/**
+* Styling tooltip for copy button
+* source: https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
+*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/**
+* Styling copy button
+*/
+#copyBtn{
+    background: #eee;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20%;
+    position: relative;
+    bottom: 3px;
+}
